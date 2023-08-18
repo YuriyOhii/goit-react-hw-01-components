@@ -21,7 +21,7 @@ const Description = styled.div`
 `;
 
 const Photo = styled.img`
-  margin: 20px auto 4px;
+  margin: 20px auto 40px;
 
   border-radius: 50%;
   border: 1px solid #212121;
@@ -81,7 +81,7 @@ const StatsLabel = styled.span`
 const StatsQuantity = styled.span`
   font-size: 20px;
   line-height: 2;
-  
+
   color: #787474;
 `;
 

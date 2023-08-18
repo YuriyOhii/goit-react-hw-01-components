@@ -19,7 +19,7 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
       <Description>
         <Photo src={avatar} alt="User avatar" width="100" height="100" />
         <Name>{username}</Name>
-        <Tag>{tag}</Tag>
+        <Tag>{`@${tag}`}</Tag>
         <Location>{location}</Location>
       </Description>
       <Statistics>
