@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { getNumberWithComa } from 'assets/utils/getNumberWithComa';
 import {
   ProfileBox,
   Description,
@@ -16,7 +17,7 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <ProfileBox>
       <Description>
-        <Photo src={avatar} alt="User avatar" width="100" height="100"/>
+        <Photo src={avatar} alt="User avatar" width="100" height="100" />
         <Name>{username}</Name>
         <Tag>{tag}</Tag>
         <Location>{location}</Location>
@@ -24,15 +25,15 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
       <Statistics>
         <StatsItem>
           <StatsLabel>Followers</StatsLabel>
-          <StatsQuantity>{stats.followers}</StatsQuantity>
+          <StatsQuantity>{getNumberWithComa(stats.followers)}</StatsQuantity>
         </StatsItem>
         <MiddleItem>
           <StatsLabel>Views</StatsLabel>
-          <StatsQuantity>{stats.views}</StatsQuantity>
+          <StatsQuantity>{getNumberWithComa(stats.views)}</StatsQuantity>
         </MiddleItem>
         <StatsItem>
           <StatsLabel>Likes</StatsLabel>
-          <StatsQuantity>{stats.likes}</StatsQuantity>
+          <StatsQuantity>{getNumberWithComa(stats.likes)}</StatsQuantity>
         </StatsItem>
       </Statistics>
     </ProfileBox>
