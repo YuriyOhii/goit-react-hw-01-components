@@ -3,7 +3,7 @@ import { FriendListItem } from 'components/FriendListItem/FriendListItem';
 import { List } from './FriendList.styled';
 export const FriendList = ({ friends }) => {
   return (
-    <List class="friend-list">
+    <List>
       {friends.map(el => (
         <FriendListItem
           key={el.id}
@@ -21,6 +21,7 @@ FriendList.propTypes = {
         avatar: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
         isOnline: PropTypes.bool.isRequired,
+        id: PropTypes.number.isRequired,
     }))
 }
 

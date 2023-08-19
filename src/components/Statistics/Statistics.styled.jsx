@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { getRandomHexColor } from 'assets/utils/getRandomHexColor';
+import { getRandomHexColor } from 'assets/utils';
 
 export const StatsTable = styled.section`
   margin: 40px auto;
@@ -21,17 +21,28 @@ export const StatItem = styled.li`
   flex-direction: column;
   align-items: center;
   width: calc(100% / ${({ itemQuantity }) => itemQuantity});
-  padding: 8px;
+  padding: 8px 4px;
 
   background-color: ${getRandomHexColor};
+  :hover {
+    opacity: 0.5;
+  };
+  :first-of-type{
+    border-bottom-left-radius: 4px;
+  };
+  :last-of-type {
+    border-bottom-right-radius: 4px;
+  
+
+  }
 `;
 export const Label = styled.span`
   font-weight: 500;
-  font-size: 24px;
+  font-size: 18px;
   letter-spacing: 0.04em;
 `;
 export const Percentage = styled.span`
   font-weight: 700;
-  font-size: 32px;
+  font-size: 24px;
   letter-spacing: 0.04em;
 `;

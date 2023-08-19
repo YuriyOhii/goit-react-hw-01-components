@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { getPercentsFromSingleNumber } from 'assets/utils';
 import {
   StatsTable,
   Title,
@@ -17,7 +18,7 @@ export const Statistics = ({ title, stats }) => {
         {stats.map(({ id, percentage, label }) => (
           <StatItem key={id} itemQuantity={stats.length}>
             <Label>{label}</Label>
-            <Percentage>{`${percentage}%`}</Percentage>
+            <Percentage>{getPercentsFromSingleNumber(percentage)}</Percentage>
           </StatItem>
         ))}
       </StatList>

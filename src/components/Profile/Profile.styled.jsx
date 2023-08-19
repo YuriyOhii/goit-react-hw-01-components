@@ -49,26 +49,30 @@ const Location = styled(Tag)``;
 
 const Statistics = styled.ul`
   display: flex;
-  gap: 8px;
   justify-content: space-between;
 
   border-top: 1px solid #787474;
   background-color: #55ecec;
-`;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  `;
 
 const StatsItem = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid #787474;
 
   width: calc(100% / 3);
 
   font-weight: 700;
-`;
 
-const MiddleItem = styled(StatsItem)`
-  border-left: 1px solid #787474;
-  border-right: 1px solid #787474;
+  :first-of-type {
+    border-bottom-left-radius: 4px;
+  };
+  :last-of-type {
+    border-bottom-right-radius: 4px;
+  };
 `;
 
 const StatsLabel = styled.span`
@@ -95,6 +99,5 @@ export {
   Statistics,
   StatsItem,
   StatsLabel,
-  MiddleItem,
   StatsQuantity,
 };
