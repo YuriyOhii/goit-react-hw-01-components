@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
-export const List = styled.ul`
-`;
+export const List = styled.ul``;
