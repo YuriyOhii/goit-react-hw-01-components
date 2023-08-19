@@ -2,6 +2,8 @@ import styled from '@emotion/styled';
 import { getRandomHexColor } from 'assets/utils/getRandomHexColor';
 
 export const StatsTable = styled.section`
+  margin: 40px auto;
+  max-width: 50%;
   border-radius: 4px;
   border: 1px solid gray;
   box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px,
@@ -20,7 +22,7 @@ export const StatItem = styled.li`
   align-items: center;
   width: calc(100% / ${({ itemQuantity }) => itemQuantity});
   padding: 8px;
-  
+
   background-color: ${getRandomHexColor};
 `;
 export const Label = styled.span`
